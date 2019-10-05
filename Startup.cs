@@ -15,9 +15,11 @@ namespace MediaAPI
 {
     public class Startup
     {
+        public static string ACCESS_TOKEN { get; set; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            ACCESS_TOKEN = configuration["TOKENS:Instagram"];
         }
 
         public IConfiguration Configuration { get; }
